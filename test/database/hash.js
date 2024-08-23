@@ -410,7 +410,7 @@ describe('Hash methods', () => {
 				assert.equal(err, null);
 				assert.equal(arguments.length, 2);
 				assert.equal(Array.isArray(values) && values.length === 3, true);
-				assert.deepEqual(['baris', 'usakli', 99].sort(), values.sort());
+				assert(['baris', 'usakli', '99'].every(val => values.includes(val)));
 				done();
 			});
 		});
